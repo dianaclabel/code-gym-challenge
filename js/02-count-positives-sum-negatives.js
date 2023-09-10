@@ -22,9 +22,6 @@ function countPositivesSumNegatives(input) {
 
   result = [sumNegative, countPositive.length];
 
-  //Calcular la cantidad de numeros positivos que hay y colocar el valor en la variable ya dedefinida
+  //Calcular la cantidad de numeros positivos y colocar el valor en una variable llamada result junto
+  //la suma de numeros negativos
 }
-
-countPositivesSumNegatives([
-  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15,
-]);
