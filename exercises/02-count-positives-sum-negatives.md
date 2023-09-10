@@ -9,7 +9,7 @@ For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should r
 
 ## Solución
 
-🔗 [ Mirar solución con el método Reacto ](..\js\02-count-positives-sum-negatives.js)
+🔗 [ Mirar solución con el método Reacto ](../js/02-count-positives-sum-negatives.js)
 
 ```
 function countPositivesSumNegatives(input) {
