@@ -16,7 +16,7 @@ Ejemplo
 
 ## Solución
 
-🔗 [ Mirar solución con el método Reacto ](../js/09-intMax.js.js)
+🔗 [ Mirar solución con el método Reacto ](../js/09-intMax.js)
 
 ```
 function intMax(a, b, c){
