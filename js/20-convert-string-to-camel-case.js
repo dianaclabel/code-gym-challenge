@@ -1,18 +1,74 @@
 function toCamelCase(str) {
   let wordCamelCase = [];
-  let convertArr = str.split("-");
-  console.log(convertArr);
-  for (let i = 0; i < convertArr.length; i++) {
-    if (convertArr[i][0] === convertArr[0][0]) {
-      wordCamelCase.push(convertArr[0]);
-    }
+  let convertArr;
 
-    wordCamelCase.push(
-      convertArr[i][0].toUpperCase() + convertArr[i].substring(1)
-    );
+  if (str.includes("_")) {
+    convertArr = str.split("_");
+    console.log(convertArr);
+  } else if (str.includes("-")) {
+    convertArr = str.split("-");
+    console.log(convertArr);
   }
 
-  console.log(wordCamelCase);
+  for (let i = 0; i < convertArr.length; i++) {
+    let esPrimero = false;
+
+    if (convertArr[i][0] === convertArr[0][0]) {
+      wordCamelCase.push(convertArr[0]);
+      esPrimero = true;
+    }
+
+    if (!esPrimero) {
+      wordCamelCase.push(
+        convertArr[i][0].toUpperCase() + convertArr[i].substring(1)
+      );
+    }
+  }
+
+  console.log(wordCamelCase.join("").toString());
 }
 
 toCamelCase("the-stealth-warrior");
+
+// function toCamelCase(str){
+//   let wordCamelCase = [];
+//  let convertArr;
+
+//  if (str.includes("_")) {
+//    convertArr = str.split("_");
+//   for (let i = 0; i < convertArr.length; i++) {
+
+//    let esPrimero = false;
+
+//    if (convertArr[i][0] === convertArr[0][0]) {
+//      wordCamelCase.push(convertArr[0]);
+//      esPrimero = true;
+//    }
+
+//    if (!esPrimero) {
+//      wordCamelCase.push(
+//        convertArr[i][0].toUpperCase() + convertArr[i].substring(1)
+//      );
+//    }
+//  }
+//  } else if (str.includes("-")) {
+//    convertArr = str.split("-");
+//    for (let i = 0; i < convertArr.length; i++) {
+
+//    let esPrimero = false;
+
+//    if (convertArr[i][0] === convertArr[0][0]) {
+//      wordCamelCase.push(convertArr[0]);
+//      esPrimero = true;
+//    }
+
+//    if (!esPrimero) {
+//      wordCamelCase.push(
+//        convertArr[i][0].toUpperCase() + convertArr[i].substring(1)
+//      );
+//    }
+//  }
+//  }
+
+// return wordCamelCase.join("").toString();
+// }
