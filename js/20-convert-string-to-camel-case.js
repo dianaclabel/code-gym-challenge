@@ -2,10 +2,34 @@ function toCamelCase(str) {
   let wordCamelCase = [];
   let convertArr;
 
-  if (str.includes("_")) {
+  // if (str.includes("_")) {
+  //   convertArr = str.split("_");
+  //   console.log(convertArr);
+  // } else if (str.includes("-")) {
+  //   convertArr = str.split("-");
+  //   console.log(convertArr);
+  // } else {
+  //   let borrarGuionBajo = str.split("_");
+  //   convertArr = borrarGuionBajo.split("-");
+  //   console.log(convertArr);
+  // }
+
+  if (str.includes("_") && str.includes("-")) {
+    let borrarGuionBajo = str.split("_");
+    let newWord = borrarGuionBajo;
+    console.log(newWord);
+    // let convertArr = newWord.split("-");
+    let convertArr = newWord.forEach((e) => {
+      if (e.includes("-")) {
+        newWord.push(e.split("-"));
+      }
+    });
+
+    console.log(convertArr);
+  } else if (str.includes("_")) {
     convertArr = str.split("_");
     console.log(convertArr);
-  } else if (str.includes("-")) {
+  } else {
     convertArr = str.split("-");
     console.log(convertArr);
   }
@@ -28,7 +52,7 @@ function toCamelCase(str) {
   console.log(wordCamelCase.join("").toString());
 }
 
-toCamelCase("the-stealth-warrior");
+toCamelCase("the-stealth_warrior");
 
 // function toCamelCase(str){
 //   let wordCamelCase = [];
