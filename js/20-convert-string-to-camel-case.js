@@ -16,15 +16,14 @@ function toCamelCase(str) {
 
   if (str.includes("_") && str.includes("-")) {
     let borrarGuionBajo = str.split("_");
-    let newWord = borrarGuionBajo;
-    console.log(newWord);
-    // let convertArr = newWord.split("-");
-    let convertArr = newWord.forEach((e) => {
+    let newWord = borrarGuionBajo.forEach((e) => {
       if (e.includes("-")) {
-        newWord.push(e.split("-"));
+        borrarGuionBajo.push(e.split("-"));
       }
     });
 
+    console.log(newWord);
+    // let convertArr = newWord.split("-");
     console.log(convertArr);
   } else if (str.includes("_")) {
     convertArr = str.split("_");
