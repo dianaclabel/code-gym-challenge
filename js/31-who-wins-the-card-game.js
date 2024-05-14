@@ -16,6 +16,7 @@ function whoWon(players, extraCard, extraTakers) {
   // agrego al array. al jugador en la posicion que le corresponda
   const perdedores = [];
   const ganadores = [];
+  const Orderganadores = [];
   for (const prop in players) {
     //console.log(prop, players[prop]);
     const nombre = prop;
@@ -33,8 +34,25 @@ function whoWon(players, extraCard, extraTakers) {
     if (extraTakers.includes(nombre)) {
       suma += extraCard;
     }
-    console.log(nombre, suma);
+
+    suma <= 21
+      ? ganadores.push([nombre, suma])
+      : perdedores.push([nombre, suma]);
+    // console.log(nombre, suma);
+
+    for (let i = 0; i < ganadores.length; i++) {
+      for (let j = i + 1; j < ganadores.length; j++) {
+        if (ganadores[i][1] > ganadores[j][1]) {
+          Orderganadores[0].push(ganadores[i]);
+        } else {
+          Orderganadores.push(ganadores[j]);
+        }
+      }
+    }
   }
+
+  console.log(perdedores);
+  console.log(Orderganadores);
 
   // vamos a tener 2 arreglos, ganadores y perdedores
   // al tener la suma total del jugador priemero vamos a validar si gano o perdio
@@ -44,3 +62,7 @@ function whoWon(players, extraCard, extraTakers) {
   // si el array esta vacio, agrego directo con push
   // si no, validar
 }
+
+var players = { Ben: "5, 2", Amy: "4, 3", Sam: "3, 10" };
+
+whoWon(players, 3, ["Ben", "Amy"]);
