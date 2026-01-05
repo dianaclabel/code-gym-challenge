@@ -31,8 +31,9 @@ Examples
         return names[i] + " and " + names[i+1] + " like this"
       }else if(names.length == 3){
         return names[i] + ", " + names[i+1] + " and " + names[i+2] + " like this"
-      }else if (names.length == 4){
-        return names[i] + ", " + names[i+1] + " and 2 others like this"
+      }else if (names.length >= 4){
+      let resto =  names.length - 2
+      return names[i] + ", " + names[i+1] + " and " + resto + " others like this"
       }
     }
   }
