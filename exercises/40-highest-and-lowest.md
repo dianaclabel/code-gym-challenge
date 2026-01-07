@@ -3,7 +3,7 @@ In this little assignment you are given a string of space separated numbers, and
 Examples
 
 ```
-   highAndLow("1 2 3 4 5"); // return "5 1"
+  highAndLow("1 2 3 4 5"); // return "5 1"
   highAndLow("1 2 -3 4 5"); // return "5 -3"
   highAndLow("1 9 3 4 -5"); // return "9 -5"
 
@@ -11,8 +11,12 @@ Examples
 
 ## Solución
 
-🔗 [ Mirar solución con el método Reacto ](../js/40-square-sum)
+🔗 [ Mirar solución con el método Reacto ](../js/40-highest-and-lowest)
 
 ```
+  function highAndLow(numbers) {
+    const nums = numbers.split(" ").map(Number);
+    return `${Math.max(...nums)} ${Math.min(...nums)}`;
+  }
   
 ```
