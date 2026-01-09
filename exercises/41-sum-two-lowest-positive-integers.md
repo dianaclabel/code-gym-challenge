@@ -13,20 +13,18 @@ For example, when an array is passed like [19, 5, 42, 2, 77], the output should 
 🔗 [ Mirar solución con el método Reacto ](../js/41-sum-two-lowest-positive-integers)
 
 ```
-  function sumTwoSmallestNumbers(numbers) {  
-  let firtsNumberLow = Math.min(...numbers);
-  let numbersLow =[firtsNumberLow];
-   
-  let arrNew = numbers.filter((number)=> number !== firtsNumberLow);
-  let secondNumberLow =  numbersLow.push(Math.min(...arrNew));
-  let total = 0
-   numbersLow.map((n)=>  total +=n)
+    
+ function sumTwoSmallestNumbers(numbers) {  
+ let firstNumberLow = Math.min(...numbers);
+  let arrNew = [...numbers];
+  arrNew.splice(arrNew.indexOf(firstNumberLow), 1);
 
- 
-  return total
-  
-  
+  let secondNumberLow = Math.min(...arrNew);
 
+  return firstNumberLow + secondNumberLow;
+  
 }
+  
+  
   
 ```
