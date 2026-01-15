@@ -17,6 +17,15 @@ It’s guaranteed that array contains at least 3 numbers.
 🔗 [ Mirar solución con el método Reacto ](../js/45-find-the-unique-number)
 
 ```
-  
+  function findUniq(arr) {
+  const first = arr[0];
+  const countFirst = arr.filter(n => n === first).length;
+
+  if (countFirst > 1) {
+    return arr.find(n => n !== first);
+  }
+
+  return first;
+}
   
 ```
