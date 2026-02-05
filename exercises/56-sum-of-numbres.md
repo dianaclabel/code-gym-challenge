@@ -9,24 +9,20 @@ Given the triangle of consecutive odd numbers:
 ...
 ```
 Calculate the sum of the numbers in the nth row of this triangle (starting at index 1) e.g.: (Input --> Output)
-## Solución
-
-🔗 [ Mirar solución con el método Reacto ](../js/55-calculate_bmi)
 
 ```
-function bmi(weight, height) {
-  
-  let imc = weight/(height*height)
-  
-  if ( imc <= 18.5){
-    return "Underweight"
-  }else if ( imc <= 25.0){
-    return "Normal"
-  }else if( imc <= 30.0){
-    return "Overweight"
-  }else  if (imc > 30.0 ){
-     return  "Obese"
-  }
+1 -->  1
+2 --> 3 + 5 = 8
+
+```
+
+## Solución
+
+🔗 [ Mirar solución con el método Reacto ](../js/56-sum-of-numbers)
+
+```
+  function rowSumOddNumbers(n) {
+	return n*n*n
 }
   
 ```
